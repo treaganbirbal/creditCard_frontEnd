@@ -23,7 +23,7 @@ class App extends React.Component{
     return (
       <div className='app'>
         <CardForm />
-        <CardDisplay />
+        <CardDisplay cardInfo={this.state.cardInfo} />
       </div>
     )
   }

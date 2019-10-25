@@ -3,7 +3,10 @@ import React from 'react';
 
 const CardDisplay = (props) => {
     return (
-        <h1>card</h1>
+        <div className='card-display'>
+            <img className='logo' src="" alt=""/>
+            <span className='card-name'>{props.cardInfo.firstName}</span>
+        </div>
     )
 }
 
