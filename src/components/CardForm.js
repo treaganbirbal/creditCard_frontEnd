@@ -19,7 +19,7 @@ const CardForm = (props) => {
              <select name="" id="">
                  <option value="">2020</option>
              </select>
-
+             <input type="submit"/>
          </form>
         </div>
     )
