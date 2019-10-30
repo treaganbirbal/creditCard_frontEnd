@@ -5,11 +5,12 @@ const CardForm = (props) => {
         <div className='form-container'>
          <form>
              <p>Card Number</p>
-             <input value='cardNumber' type="text"/>
+             <input onChange={props.handleChange} value='' type="text"/>
              <p>First Name</p>
              <input value='firstName' type="text"/>
              <p>Last Name</p>
              <input value='lastName' type="text"/>
+             <p>Expire</p>
              <select name="" id="">
                  <option value="">January</option>
              </select>

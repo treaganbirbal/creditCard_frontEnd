@@ -1,6 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
 import CardForm from './components/CardForm.js'
 import CardDisplay from './components/CardDisplay.js'
 
@@ -9,7 +8,7 @@ class App extends React.Component{
     super()
     this.state = {
       cardInfo: {
-        cardNumber: [],
+        cardNumber: 0,
         firstName: '',
         secondName: '',
         expMonth: '',
@@ -19,11 +18,17 @@ class App extends React.Component{
       }
     }
   }
+
+  handleChange = (event) => {
+   this.setState({
+     cardNumber: event.target.value
+   })
+  }
   render(){
     return (
       <div className='app'>
-        <CardForm />
-        <CardDisplay cardInfo={this.state.cardInfo} />
+        <CardForm handleChange={this.handleChange} />
+        <CardDisplay  cardInfo={this.state.cardInfo} />
       </div>
     )
   }
