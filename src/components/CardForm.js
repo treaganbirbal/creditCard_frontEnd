@@ -5,7 +5,7 @@ const CardForm = (props) => {
         <div className='form-container'>
          <form>
              <p>Card Number</p>
-             <input onChange={props.handleChange} value='' type="text"/>
+             <input onChange={props.handleChange} name='cardNumber' value={props.cardNumber} type="text"/>
              <p>First Name</p>
              <input value='firstName' type="text"/>
              <p>Last Name</p>

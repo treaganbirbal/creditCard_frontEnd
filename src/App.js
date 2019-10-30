@@ -7,28 +7,33 @@ class App extends React.Component{
   constructor(){
     super()
     this.state = {
-      cardInfo: {
-        cardNumber: 0,
+        cardNumber: [],
         firstName: '',
-        secondName: '',
+        lastName: '',
         expMonth: '',
         expDay: '',
         expYear: '',
         submitted: false,
       }
-    }
   }
 
   handleChange = (event) => {
+    // debugger;
+    console.log(event.target.value)
    this.setState({
-     cardNumber: event.target.value
+     cardNumber: event.target.value,
+     firstName: event.taget.value,
+     lastName: event.taget.value,
+     expMonth: event.taget.value,
+     expDay: event.taget.value,
+     expYear: event.taget.value,
    })
   }
   render(){
     return (
       <div className='app'>
         <CardForm handleChange={this.handleChange} />
-        <CardDisplay  cardInfo={this.state.cardInfo} />
+        <CardDisplay  cardInfo={this.state.cardNumber} />
       </div>
     )
   }
