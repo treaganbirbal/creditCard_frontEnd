@@ -19,21 +19,16 @@ class App extends React.Component{
 
   handleChange = (event) => {
     // debugger;
-    console.log(event.target.value)
+    // console.log(event.target.value)
    this.setState({
-     cardNumber: event.target.value,
-     firstName: event.taget.value,
-     lastName: event.taget.value,
-     expMonth: event.taget.value,
-     expDay: event.taget.value,
-     expYear: event.taget.value,
+     [event.target.name] : event.target.value
    })
   }
   render(){
     return (
       <div className='app'>
-        <CardForm handleChange={this.handleChange} />
-        <CardDisplay  cardInfo={this.state.cardNumber} />
+        <CardForm cardNumber={this.state.cardNumber} firstName={this.state.firstName} lastName={this.state.lastName} handleChange={this.handleChange} />
+        <CardDisplay cardNumber={this.state.cardNumber} firstName={this.state.firstName} lastName={this.state.lastName}  />
       </div>
     )
   }

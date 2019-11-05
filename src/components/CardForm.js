@@ -7,18 +7,18 @@ const CardForm = (props) => {
              <p>Card Number</p>
              <input onChange={props.handleChange} name='cardNumber' value={props.cardNumber} type="text"/>
              <p>First Name</p>
-             <input value='firstName' type="text"/>
+             <input onChange={props.handleChange} value={props.firstName} name='firstName' type="text"/>
              <p>Last Name</p>
-             <input value='lastName' type="text"/>
+             <input onChange={props.handleChange} value={props.lastName} name='secondName' type="text"/>
              <p>Expire</p>
-             <select name="" id="">
-                 <option value="">January</option>
+             <select onChange={props.handleChange} name="" id="">
+                 <option >January</option>
              </select>
-             <select name="" id="">
-                 <option value="">01</option>
+             <select onChange={props.handleChange} name="" id="">
+                 <option value={props.expDay}>01</option>
              </select>
-             <select name="" id="">
-                 <option value="">2020</option>
+             <select onChange={props.handleChange} name="" id="">
+                 <option value={props.expYear}>2020</option>
              </select>
              <input type="submit"/>
          </form>
